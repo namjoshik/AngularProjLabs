@@ -1,15 +1,21 @@
-<!--
 <label>Server Name</label>
-<!--<input type="text" class="form-control" (input)="onUpdateServerName($event)">
+
+<!--<input type="text" class="form-control" (input)="onUpdateServerName($event)">-->
 
 
 <input type="text" class="form-control" [(ngModel)]="serverName">
 <button class="btn btn-primary" [disabled] = "!allowAddServer" (click)="onCreateServer()">Add Server</button>
-<p>{{ serverCreationStatus }}</p>
+
+<p *ngIf="serverCreated ; else noServer">{{ serverCreationStatus }}</p>
+<ng-template #noServer>
+  <p> No server yet created !</p>
+</ng-template>
+
 <hr>
-<app-server></app-server>
-<hr>
-<app-server></app-server>
--->
-<h1>This is an assignment on Data Binding</h1>
+<app-server *ngFor="let serve of Servers"></app-server>
+
+
+
+<!--<h1>This is an assignment on Data Binding</h1>
 <app-data-binding-assignment></app-data-binding-assignment>
+-->

@@ -1,0 +1,12 @@
+
+
+<label>Click Here  </label>
+<button class="btn btn-primary" (click)="toggleDisplay()">Add Item</button>
+<p *ngIf="display">Que Sera Sera</p>
+<p
+  *ngFor="let clic of clickCounter"
+  [ngStyle]="{backgroundColor: clic > 4 ? 'blue' : 'white'}"
+  [ngClass]="{apply: clic > 4}"
+
+
+> This is click number {{ clic }}</p>

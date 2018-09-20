@@ -19,4 +19,27 @@
 
 <app-servers></app-servers>
 -->
-<app-directive-assignment></app-directive-assignment>
+<!--
+<label>
+  <input type="radio" value="yes" name="check" [(ngModel)]="check">Yes
+
+</label>
+  <label>
+    <input type="radio" value="yes" name="check" [(ngModel)]="check">No
+  </label><br>
+{{ visible }}
+-->
+
+
+<div class="form-group">
+  <label>Check</label>
+  <div class="form-control">
+    <label><input type="radio" name="check" [value]=true [(ngModel)]="visible">Yes</label>
+    <label><input type="radio" name="check" [value]=false  [(ngModel)]="!visible">No</label>
+  </div>
+</div>
+
+<p>{{visible}}</p>
+
+
+<app-directive-assignment *ngIf="visible"></app-directive-assignment>

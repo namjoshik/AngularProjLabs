@@ -28,8 +28,6 @@
     <input type="radio" value="yes" name="check" [(ngModel)]="check">No
   </label><br>
 {{ visible }}
--->
-
 
 <div class="form-group">
   <label>Check</label>
@@ -43,3 +41,15 @@
 
 
 <app-directive-assignment *ngIf="visible"></app-directive-assignment>
+-->
+
+<app-header></app-header>
+<div class="container">
+<div class="row">
+  <div class="col-md-12">
+    <app-recipe></app-recipe>
+    <app-shopping-list></app-shopping-list>
+  </div>
+</div>
+
+</div>

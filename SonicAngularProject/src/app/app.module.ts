@@ -10,6 +10,13 @@ import { WarningAlertComponent } from './warning-alert/warning-alert.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { DataBindingAssignmentComponent } from './data-binding-assignment/data-binding-assignment.component';
 import { DirectiveAssignmentComponent } from './directive-assignment/directive-assignment.component';
+import { HeaderComponent } from './header/header.component';
+import { RecipeComponent } from './recipe/recipe.component';
+import { RecipeListComponent } from './recipe/recipe-list/recipe-list.component';
+import { RecipeDetailComponent } from './recipe/recipe-detail/recipe-detail.component';
+import { RecipeItemComponent } from './recipe/recipe-list/recipe-item/recipe-item.component';
+import { ShoppingListComponent } from './shopping-list/shopping-list.component';
+import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +26,14 @@ import { DirectiveAssignmentComponent } from './directive-assignment/directive-a
     WarningAlertComponent,
     SuccessAlertComponent,
     DataBindingAssignmentComponent,
-    DirectiveAssignmentComponent
+    DirectiveAssignmentComponent,
+    HeaderComponent,
+    RecipeComponent,
+    RecipeListComponent,
+    RecipeDetailComponent,
+    RecipeItemComponent,
+    ShoppingListComponent,
+    ShoppingEditComponent
   ],
   imports: [
     BrowserModule,

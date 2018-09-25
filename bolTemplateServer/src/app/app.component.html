@@ -9,12 +9,43 @@
     <div class="row">
       <h1>Vodafone-Order Portal Rheinland -Pfalz</h1>
     </div>
-    <div class="row">
-      <h4 style="text-align: left; margin-left: 150px; margin-top: auto; margin-bottom: auto" >Form step 1 of 8</h4>
-    </div>
   </div>
   </header>
   <hr>
 <router-outlet></router-outlet>
 </div>
+
+<!--
+<input
+    type="button"
+    id="next"
+    name="next"
+    value="Previous Step"
+    class="btn btn-danger"
+    style="margin-left: 100px; margin-bottom: 20px"
+    (click)="getPreviousStep()"
+    *ngIf="fn != 1 || fn !== 8"
+    >
+<input
+    type="button"
+    id="last"
+    name="last"
+    value="Next Step"
+    class="btn btn-success"
+    style="margin-left: 595px; margin-bottom: 20px"
+    (click)="getNextStep()"
+    *ngIf="fn < 8"
+    >
+    <input
+    type="button"
+    id="last"
+    name="last"
+    value="Submit"
+    class="btn btn-success"
+    style="margin-left: 595px; margin-bottom: 20px"
+    (click)="getNextStep()"
+    *ngIf="fn === 8 && visible"
+    >
+  -->
+  <app-buttons></app-buttons>
 </fieldset>

@@ -1,3 +1,5 @@
+import { LanguageComponent } from './form-step1/not-existing/language/language.component';
+
 import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -9,9 +11,13 @@ import { FormStep5Component } from './form-step5/form-step5.component';
 import { FormStep6Component } from './form-step6/form-step6.component';
 import { FormStep7Component } from './form-step7/form-step7.component';
 import { FormStep8Component } from './form-step8/form-step8.component';
+import { FormSubmittedComponent } from './form-submitted/form-submitted.component';
+import { NoComponentComponent } from './no-component/no-component.component';
 
 const routes: Routes = [
+  { path: '', component: FormStep1Component },
   { path: 'form-step1', component: FormStep1Component },
+  { path: 'form-step1/not-existing/language', component: LanguageComponent},
   { path: 'form-step2', component: FormStep2Component },
   { path: 'form-step3', component: FormStep3Component },
   { path: 'form-step4', component: FormStep4Component },
@@ -19,6 +25,8 @@ const routes: Routes = [
   { path: 'form-step6', component: FormStep6Component },
   { path: 'form-step7', component: FormStep7Component },
   { path: 'form-step8', component: FormStep8Component },
+  { path: 'form-submitted', component: FormSubmittedComponent },
+  { path: '**', component: NoComponentComponent}
 
 ];
 
@@ -37,5 +45,7 @@ export const routingComponents = [
   FormStep5Component,
   FormStep6Component,
   FormStep7Component,
-  FormStep8Component
+  FormStep8Component,
+  NoComponentComponent,
+  FormSubmittedComponent
 ];

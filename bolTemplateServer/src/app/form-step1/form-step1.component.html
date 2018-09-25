@@ -1,3 +1,8 @@
-<p>
-  form-step1 works!
-</p>
+<div class="form-group">
+  <label style="size: A4">Are you an existing customer ?</label>
+  <label><input type="radio" name="option" value="yes" (click)="setradio('yes')" ngModel>  Yes</label>
+  <label><input type="radio" name="option" value="no" (click)="setradio('no')" ngModel>  No</label>
+
+<app-customer-details *ngIf="isSelected('yes')"></app-customer-details>
+<app-not-existing *ngIf="isSelected('no')"></app-not-existing>
+</div>

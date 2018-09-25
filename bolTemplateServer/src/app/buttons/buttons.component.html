@@ -1,0 +1,41 @@
+<input
+    type="button"
+    id="next"
+    name="next"
+    value="Previous Step"
+    class="btn btn-danger"
+    style="margin-left: 100px; margin-bottom: 20px"
+    (click)="getPreviousStep()"
+    [disabled]="fn === 1"
+    *ngIf="visible"
+>
+<input
+    type="button"
+    id="last"
+    name="last"
+    value="Caching"
+    class="btn btn-primary"
+    style="margin-left: 295px; margin-bottom: 20px"
+    (click)="getNextStep()"
+    disabled
+>
+<input
+    type="button"
+    id="last"
+    name="last"
+    value="Next Step"
+    class="btn btn-success"
+    style="margin-left: 285px; margin-bottom: 20px"
+    (click)="getNextStep()"
+    *ngIf="fn < 8"
+>
+<input
+    type="button"
+    id="last"
+    name="last"
+    value="Submit"
+    class="btn btn-success"
+    style="margin-left: 285px; margin-bottom: 20px"
+    (click)="getNextStep()"
+    *ngIf="fn === 8 && visible"
+    >

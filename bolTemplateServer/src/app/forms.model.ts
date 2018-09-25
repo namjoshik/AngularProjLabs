@@ -1,4 +1,4 @@
-export class formsteps {
+export class FormSteps {
 
   constructor ( public name: string ) {}
 

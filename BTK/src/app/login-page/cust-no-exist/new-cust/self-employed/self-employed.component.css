@@ -1,0 +1,33 @@
+.dob{
+margin-left: 5px;
+float: right;
+font-size: 10pt;
+font-family: sans-serif;
+margin-top: 10px;
+}
+
+label{
+  font-size: 8pt;
+}
+
+.adjust_dob{
+  margin-left: 155px;
+  padding-left: 50px;
+  float: right;
+  font-size: 10pt;
+  font-family: sans-serif;
+  margin-top: 10px;
+}
+
+.adjust_check{
+  margin-left: 10px;
+}
+
+.adjust_text{
+  width: 379px;
+  margin-left: 15px;
+  float: right;
+  font-size: 10pt;
+  font-family: sans-serif;
+  margin-top: 10px;
+}

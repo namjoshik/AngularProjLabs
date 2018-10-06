@@ -1,0 +1,22 @@
+input{
+font-size: 8pt;
+margin-bottom: 10px;
+}
+
+label{
+  font-size: 8pt;
+  font-weight: bold;
+}
+
+hr{
+  margin-top: -2px;
+}
+
+button{
+  margin-top: 20px;
+  white-space: normal;
+  font-size: 9pt;
+  font-weight: bolder;
+  height: 50px;
+  width: 165px;
+}

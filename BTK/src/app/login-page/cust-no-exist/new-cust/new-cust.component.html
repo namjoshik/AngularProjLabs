@@ -1,3 +1,45 @@
-<p>
-  new-cust works!
-</p>
+<div class="container">
+
+  <!--Text Input-->
+  <div class="row">
+    <div class="col-xl-12 input-group-sm">
+      <input id="firmname" name="firmname" type="text" placeholder="Firmenname" class="form-control">
+    </div>
+  </div>
+
+  <!--Radio Buttons-->
+  <div class="row">
+    <div class="col-xl-6">
+      <label class="checkbutton">
+        <input type="radio" name="radios" id="SelfEmp" value="SelfEmployed" (click)="setradio('self')" ngModel>
+        Selbständige, nicht eingetragene Gesellschaften </label>
+    </div>
+    <div class="col-xl-6">
+      <label class="checkbutton">
+        <input type="radio" name="radios" id="RegComp" value="RegisteredCompany" (click)="setradio('regco')" ngModel >
+        Eingetragene Gesellschaften, Vereine, Behörden
+      </label>
+    </div>
+    <hr>
+  </div>
+</div>
+
+<app-self-employed *ngIf="isSelected('self')"></app-self-employed>
+<app-registered-company *ngIf="isSelected('regco')"></app-registered-company>
+<app-commercial-enquiry></app-commercial-enquiry>
+<app-bill-contact></app-bill-contact>
+
+<div class="row">
+    <div class="col-xl-12">
+      <div class="row">
+        <div class="col-xl-9">
+            <label></label>
+        </div>
+        <div class="col-xl-3">
+            <button type="submit" class="btn btn-success"> Abschließen & Versenden </button>
+        </div>
+      </div>
+    </div>
+</div>
+
+

@@ -1,5 +1,73 @@
 /* You can add global styles to this file, and also import other style files */
+
 .bkColor{
 
   background-color: lavender;
+}
+
+.checkbutton{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+hr {
+  height: 1px;
+  width: 780px;
+  background-color: rgb(230,0,0);
+  margin-top: -100px;
+}
+
+button{
+
+  height: 30px;
+  width: 165px;
+  font-size: 10pt;
+  white-space: normal;
+  margin-top: -8px;
+}
+
+.strasse{
+  width: 674px;
+  margin-left: 15px;
+  float: right;
+  font-size: 10pt;
+  font-family: sans-serif;
+  margin-top: 10px;
+}
+
+.hausnummer{
+  width: 84px;
+  margin-left: 15px;
+  float: right;
+  font-size: 10pt;
+  font-family: sans-serif;
+  margin-top: 10px;
+}
+
+.adjust_text{
+  width: 379px;
+  margin-left: 15px;
+  float: right;
+  font-size: 10pt;
+  font-family: sans-serif;
+  margin-top: 10px;
+}
+
+.adjust_text_2{
+  width: 247px;
+  margin-left: 15px;
+  float: right;
+  font-size: 10pt;
+  font-family: sans-serif;
+  margin-top: 10px;
+}
+
+.adjust_text_3{
+  width: 770px;
+  margin-left: 15px;
+  float: right;
+  font-size: 10pt;
+  font-family: sans-serif;
+  margin-top: 10px;
 }

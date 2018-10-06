@@ -1,0 +1,12 @@
+<div class="row">
+    <div class="form-check form-check-inline">
+      <label class="form-check-label checkCust"> Ich bin bereits Kunde:</label>
+        <label class="form-check-label checkbutton">
+          <input class="form-check-input" type="radio" name="check" id="" value="yes" (click)="setradio('yes')" ngModel>Ja  </label>
+        <label class="form-check-label checkbutton">
+          <input class="form-check-input" type="radio" name="check" id="" value="no" (click)="setradio('no')" ngModel>Nein </label>
+    </div>
+  </div>
+
+  <app-cust-exist *ngIf="isSelected('yes')" ></app-cust-exist >
+  <app-cust-no-exist *ngIf="isSelected('no')" ></app-cust-no-exist >

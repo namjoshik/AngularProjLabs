@@ -1,4 +1,5 @@
 <!--Customer Name-->
+<form name="inputForm" novalidate>
 <div class="container-fluid">
   <div class="row CustDetail">
       <label class="col-md-4 CustDetail">Kundenname</label>
@@ -7,7 +8,8 @@
           style="margin-left: 40px"
           placeholder="Full Name"
           class="input-small"
-          required>
+          required
+         [(ngModel)]="custname">
   </div>
 
 
@@ -37,13 +39,10 @@
 </div>
 <p>Bitte beachten Sie, dass pro Anschluss ein eigener Auftrag einzureichen ist</p>
     <div class="container-fluid">
-
-        <label class="col-md-4"><button type="button" class="btn btn-danger" disabled>Previous Page</button></label>
-        <label class="col-md-4"><button type="button" class="btn btn-secondary" disabled>Save Data</button></label>
-        <label class="col-md-4"><button type="button" class="btn btn-success">Next Step</button></label>
+        <label class="col-md-12"><button type="submit" class="btn btn-success float-right" (click)="onNextPage()" >weiter zu Schritt 2</button></label>
       </div>
 
-
+</form>
 
 
 

@@ -1,0 +1,73 @@
+<div class="container-fluid">
+  <div class="row">
+
+      <div class="col-xl-4">
+        <label>
+          <button type="button" class="btn btn-info">Testen Sie Ihre Verfügbarkeit</button>
+        </label>
+      </div>
+      <div class="col-xl-8">
+        <label class="msg">
+          <input type="checkbox"  id="my-check"  (change)="onChange($event)" [checked]="checkModel" required/>
+          Ich bestätige, die Vorprüfung an meiner gewünschten Lokation ausgeführt zu haben
+        </label>
+      </div>
+  </div>
+
+<hr>
+</div>
+<div class="row">
+    <div class="col-xl-12">
+      <p class="selectHeader"> Sprache & xDSL Pakate (ISDN, AII IP, TAL, Regio, LTE) </p>
+    </div>
+  </div>
+
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-xl-2"></div>
+        <div class="col-xl-5">
+            <div class="row">
+                <label><input type="radio" name="prodopt" id="prodopt1" value="IP Anlagen-Anschluss" class="checkbutton"/>   IP Anlagen-Anschluss</label>
+            </div>
+            <div class="row">
+                <label><input type="radio" name="prodopt" id="prodopt2" value="Anlagen-Anschluss Plus (S 2M)" class="checkbutton"/>   Anlagen-Anschluss Plus (S 2M)</label>
+            </div>
+            <div class="row">
+                <label><input type="radio" name="prodopt" id="prodopt3" value="Anlagen-Anschluss Plus (S 0)" class="checkbutton"/>   Anlagen-Anschluss Plus (S 0)</label>
+            </div>
+            <div class="row">
+                <label><input type="radio" name="prodopt" id="prodopt4" value="Primärmultiplex-Anschluss (S 2M) (ISDN)" class="checkbutton"/>   Primärmultiplex-Anschluss (S 2M) (ISDN)</label>
+            </div>
+            <div class="row">
+                <label><input type="radio" name="prodopt" id="prodopt5" value="S 0-Anlagen-Anschluss (ISDN)" class="checkbutton"/>   S 0-Anlagen-Anschluss (ISDN)</label>
+            </div>
+        </div>
+
+        <div class="col-xl-5 form-group">
+            <div class="row">
+                <label><input type="radio" name="prodopt" id="prodopt6" value="Komfort-Anschluss Plus" class="checkbutton"/>   Komfort-Anschluss Plus</label>
+            </div>
+            <div class="row">
+                <label><input type="radio" name="prodopt" id="prodopt7" value="Komfort-Anschluss Classic" class="checkbutton"/>   Komfort-Anschluss Classic</label>
+            </div>
+            <div class="row">
+                <label><input type="radio" name="prodopt" id="prodopt8" value="Komfort-Anschluss Plus Regio" class="checkbutton"/>   Komfort-Anschluss Plus Regio</label>
+            </div>
+            <div class="row">
+                <label><input type="radio" name="prodopt" id="prodopt9" value="Komfort-Anschluss Plus LTE" class="checkbutton"/>   Komfort-Anschluss Plus LTE</label>
+            </div>
+            <div class="row">
+                <label><input type="radio" name="prodopt" id="prodopt10" value="Preselect" class="checkbutton"/>   Preselect</label>
+            </div>
+        </div>
+
+  </div>
+
+  <div class="col-xl-4">
+      <label>
+        <button type="button" class="btn btn-info" (click)="onCheckValid()" [disabled]="!checkModel" >TestValid</button>
+      </label>
+    </div>
+
+</div>
+

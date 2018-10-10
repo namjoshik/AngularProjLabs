@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cust-exist',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustExistComponent implements OnInit {
 
-  constructor() { }
+  custname: string;
+
+  constructor(private route: Router) { }
 
   ngOnInit() {
+  }
+
+  onNextPage () {
+
+    this.route.navigate(['/form-step1']);
   }
 
 }

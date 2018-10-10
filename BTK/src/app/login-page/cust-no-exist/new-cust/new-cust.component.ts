@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-new-cust',
@@ -10,7 +11,7 @@ export class NewCustComponent implements OnInit {
   private selectedLink: string;
   setButtonOn = false;
 
-  constructor() { }
+  constructor(private route: Router) { }
 
   ngOnInit() {
   }
@@ -26,5 +27,9 @@ export class NewCustComponent implements OnInit {
     return (this.selectedLink === name);
   }
 
+  onReturnHome () {
+    this.route.navigate(['/home']);
+
+  }
 
 }

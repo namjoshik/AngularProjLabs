@@ -7,20 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormStep1Component implements OnInit {
 
-  checkModel: false;
+  checkModel = false;
+  selectedLink = 'hakuna';
+  setButtonOn = false;
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() { }
+
+  setradio(e: string): void {
+      this.selectedLink = e;
+      this.setButtonOn = true;
   }
 
-  onChange($event) {
-    this.checkModel = $event.target.checked;
-  }
-
-  onCheckValid () {
-      if ( this.checkModel ) {
-        return true;
+  isSelected(name: string): boolean {
+      if (!this.selectedLink) {
+        return false;
       }
+      return (this.selectedLink === name);
     }
 }

@@ -7,18 +7,25 @@
         </label>
       </div>
       <div class="col-xl-8">
-        <label class="msg">
-          <input type="checkbox"  id="my-check"  (change)="onChange($event)" [checked]="checkModel" required/>
-          Ich bestätige, die Vorprüfung an meiner gewünschten Lokation ausgeführt zu haben
-        </label>
+        <div class="form-group">
+          <label [ngClass]="{danger: isChecked.touched && isChecked.errors}">
+            <input type="checkbox"  name="isChecked" required #isChecked="ngModel" [(ngModel)]="checkModel"/>
+            * Ich bestätige, die Vorprüfung an meiner gewünschten Lokation ausgeführt zu haben  asdasdasdadasdada {{ checkModel }}
+          </label>
+
       </div>
-  </div>
+
+    </div>
+
+    </div>
+
+
 
 <hr>
 </div>
 <div class="row">
-    <div class="col-xl-12">
-      <p class="selectHeader"> Sprache & xDSL Pakate (ISDN, AII IP, TAL, Regio, LTE) </p>
+    <div class="col-xl-8">
+      <p class="selectHeader" [ngClass]="{danger: prodOpt.touched && prodOpt.errors}"> * Sprache & xDSL Pakate (ISDN, AII IP, TAL, Regio, LTE) </p>
     </div>
   </div>
 
@@ -27,47 +34,106 @@
       <div class="col-xl-2"></div>
         <div class="col-xl-5">
             <div class="row">
-                <label><input type="radio" name="prodopt" id="prodopt1" value="IP Anlagen-Anschluss" class="checkbutton"/>   IP Anlagen-Anschluss</label>
+                <label><input type="radio" name="prodopt" id="prodopt1" value="IP Anlagen-Anschluss" class="checkbutton" (click)="setradio('prodopt')" required/>   IP Anlagen-Anschluss</label>
             </div>
             <div class="row">
-                <label><input type="radio" name="prodopt" id="prodopt2" value="Anlagen-Anschluss Plus (S 2M)" class="checkbutton"/>   Anlagen-Anschluss Plus (S 2M)</label>
+                <label><input type="radio" name="prodopt" id="prodopt2" value="Anlagen-Anschluss Plus (S 2M)" class="checkbutton" (click)="setradio('prodopt')" required/>   Anlagen-Anschluss Plus (S 2M)</label>
             </div>
             <div class="row">
-                <label><input type="radio" name="prodopt" id="prodopt3" value="Anlagen-Anschluss Plus (S 0)" class="checkbutton"/>   Anlagen-Anschluss Plus (S 0)</label>
+                <label><input type="radio" name="prodopt" id="prodopt3" value="Anlagen-Anschluss Plus (S 0)" (click)="setradio('prodopt3')"  class="checkbutton" required/>   Anlagen-Anschluss Plus (S 0)</label>
             </div>
             <div class="row">
-                <label><input type="radio" name="prodopt" id="prodopt4" value="Primärmultiplex-Anschluss (S 2M) (ISDN)" class="checkbutton"/>   Primärmultiplex-Anschluss (S 2M) (ISDN)</label>
+                <label><input type="radio" name="prodopt" id="prodopt4" value="Primärmultiplex-Anschluss (S 2M) (ISDN)" class="checkbutton" (click)="setradio('prodopt4')" required/>   Primärmultiplex-Anschluss (S 2M) (ISDN)</label>
             </div>
             <div class="row">
-                <label><input type="radio" name="prodopt" id="prodopt5" value="S 0-Anlagen-Anschluss (ISDN)" class="checkbutton"/>   S 0-Anlagen-Anschluss (ISDN)</label>
+                <label><input type="radio" name="prodopt" id="prodopt5" value="S 0-Anlagen-Anschluss (ISDN)" class="checkbutton" (click)="setradio('prodopt5')" required/>   S 0-Anlagen-Anschluss (ISDN)</label>
             </div>
         </div>
 
         <div class="col-xl-5 form-group">
             <div class="row">
-                <label><input type="radio" name="prodopt" id="prodopt6" value="Komfort-Anschluss Plus" class="checkbutton"/>   Komfort-Anschluss Plus</label>
+                <label><input type="radio" name="prodopt" id="prodopt6" value="Komfort-Anschluss Plus" class="checkbutton" (click)="setradio('prodopt6')" required/>   Komfort-Anschluss Plus</label>
             </div>
             <div class="row">
-                <label><input type="radio" name="prodopt" id="prodopt7" value="Komfort-Anschluss Classic" class="checkbutton"/>   Komfort-Anschluss Classic</label>
+                <label><input type="radio" name="prodopt" id="prodopt7" value="Komfort-Anschluss Classic" class="checkbutton" (click)="setradio('prodopt7')" required/>   Komfort-Anschluss Classic</label>
             </div>
             <div class="row">
-                <label><input type="radio" name="prodopt" id="prodopt8" value="Komfort-Anschluss Plus Regio" class="checkbutton"/>   Komfort-Anschluss Plus Regio</label>
+                <label><input type="radio" name="prodopt" id="prodopt8" value="Komfort-Anschluss Plus Regio" class="checkbutton" (click)="setradio('prodopt8')" required/>   Komfort-Anschluss Plus Regio</label>
             </div>
             <div class="row">
-                <label><input type="radio" name="prodopt" id="prodopt9" value="Komfort-Anschluss Plus LTE" class="checkbutton"/>   Komfort-Anschluss Plus LTE</label>
+                <label><input type="radio" name="prodopt" id="prodopt9" value="Komfort-Anschluss Plus LTE" class="checkbutton" (click)="setradio('prodopt9')" required/>   Komfort-Anschluss Plus LTE</label>
             </div>
             <div class="row">
-                <label><input type="radio" name="prodopt" id="prodopt10" value="Preselect" class="checkbutton"/>   Preselect</label>
+                <label><input type="radio" name="prodopt" id="prodopt10" value="Preselect" class="checkbutton" (click)="setradio('prodopt')" required/>   Preselect</label>
             </div>
         </div>
-
   </div>
 
-  <div class="col-xl-4">
+  <div class="row">
+    <div class="col-xl-4">
+      <p class="selectHeader"> Internet Festnetz </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xl-2"></div>
+      <div class="col-xl-5">
+        <div class="row">
+          <label>
+            <input type="radio" name="prodopt" id="prodopt11" value="Business Internet Pro" class="checkbutton" (click)="setradio('prodopt')" ngModel/>   Business Internet Pro
+          </label>
+        </div>
+      </div>
+  </div>
+
+  <app-prod-opt1 *ngIf="isSelected('prodopt')" ></app-prod-opt1>
+  <app-prod-opt3 *ngIf="isSelected('prodopt3')" ></app-prod-opt3>
+  <app-prod-opt4 *ngIf="isSelected('prodopt4')" ></app-prod-opt4>
+  <app-prod-opt5 *ngIf="isSelected('prodopt5')" ></app-prod-opt5>
+  <app-prod-opt6 *ngIf="isSelected('prodopt6')" ></app-prod-opt6>
+  <app-prod-opt7 *ngIf="isSelected('prodopt7')" ></app-prod-opt7>
+  <app-prod-opt8 *ngIf="isSelected('prodopt8')" ></app-prod-opt8>
+  <app-prod-opt9 *ngIf="isSelected('prodopt9')" ></app-prod-opt9>
+
+
+  <div class="row">
+
+    <div class="col-xl-3">
       <label>
-        <button type="button" class="btn btn-info" (click)="onCheckValid()" [disabled]="!checkModel" >TestValid</button>
+        <button type="button" class="btn btn-danger">zurück zu Schritt 1</button>
       </label>
     </div>
 
-</div>
+    <div class="col-xl-1">
+        <label></label>
+      </div>
 
+    <div class="col-xl-3">
+      <label>
+        <button type="button" class="btn btn-info">Zwischenspeichern</button>
+      </label>
+    </div>
+
+
+    <div class="col-xl-1">
+        <label></label>
+      </div>
+
+
+    <div class="col-xl-3">
+      <label>
+        <button type="button" class="btn btn-success" [disabled]="!checkModel">weiter zu Schritt 3</button>
+      </label>
+    </div>
+
+    <div class="col-xl-1">
+        <label></label>
+      </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xl-12 alert alert-danger selectHeader">
+        Um zu Schritt 3 zu gelangen, markieren Sie alle mit * markierten Felder
+    </div>
+    </div>
+</div>

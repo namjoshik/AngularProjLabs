@@ -16,6 +16,14 @@ import { RegisteredCompanyComponent } from './login-page/cust-no-exist/new-cust/
 import { CommercialEnquiryComponent } from './login-page/cust-no-exist/new-cust/commercial-enquiry/commercial-enquiry.component';
 import { BillContactComponent } from './login-page/cust-no-exist/new-cust/bill-contact/bill-contact.component';
 import { FormStep1Component } from './form-step1/form-step1.component';
+import { ProdOpt3Component } from './form-step1/prod-opt3/prod-opt3.component';
+import { ProdOpt4Component } from './form-step1/prod-opt4/prod-opt4.component';
+import { ProdOpt5Component } from './form-step1/prod-opt5/prod-opt5.component';
+import { ProdOpt6Component } from './form-step1/prod-opt6/prod-opt6.component';
+import { ProdOpt7Component } from './form-step1/prod-opt7/prod-opt7.component';
+import { ProdOpt8Component } from './form-step1/prod-opt8/prod-opt8.component';
+import { ProdOpt9Component } from './form-step1/prod-opt9/prod-opt9.component';
+import { ProdOpt1Component } from './form-step1/prod-opt1/prod-opt1.component';
 
 
 
@@ -24,6 +32,7 @@ const appRoutes: Routes = [
   { path: 'home', component: LoginPageComponent },
   { path: 'login-page/cust-no-exist/new-cust', component: NewCustComponent},
   { path: 'form-step1', component: FormStep1Component },
+  { path: 'form-step2', component: AppComponent },
   { path: '**', component: LoginPageComponent }
 ];
 
@@ -39,6 +48,14 @@ const appRoutes: Routes = [
     CommercialEnquiryComponent,
     BillContactComponent,
     FormStep1Component,
+    ProdOpt3Component,
+    ProdOpt4Component,
+    ProdOpt5Component,
+    ProdOpt6Component,
+    ProdOpt7Component,
+    ProdOpt8Component,
+    ProdOpt9Component,
+    ProdOpt1Component,
   ],
   imports: [
     BrowserModule,

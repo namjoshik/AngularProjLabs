@@ -1,1 +1,29 @@
-{{ checkModel }}
+<div class="container-fluid">
+  <form (ngSubmit)="onSubmit(ff)" #ff="ngForm" >
+    <div class="row">
+      <div class="col-xl-4">
+        <label>
+          <button type="button" class="btn btn-info">Testen Sie Ihre Verfügbarkeit</button>
+        </label>
+      </div>
+
+      <div class="col-xl-8">
+        <div class="form-group">
+          <label >
+            <input type="checkbox"  name="isChecked" required ngModel />
+            * Ich bestätige, die Vorprüfung an meiner gewünschten Lokation ausgeführt zu haben
+          </label>
+          </div>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary"></button>
+    <span *ngIf="!ff.valid && ff.touched">No Valid</span>
+
+    <input type="checkbox"  name="isChecked" required ngModel />
+  <label [ngClass]="{danger: ff.touched && ff.invalid}">
+      * Ich bestätige, die Vorprüfung an meiner gewünschten Lokation ausgeführt zu haben
+  </label>
+
+  </form>
+</div>

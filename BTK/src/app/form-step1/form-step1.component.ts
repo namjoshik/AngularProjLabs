@@ -1,17 +1,18 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-form-step1',
-  templateUrl: './form-step1.component.html',
+  templateUrl: './test.html',
   styleUrls: ['./form-step1.component.css']
 })
 export class FormStep1Component implements OnInit {
 
   checkModel = false;
-  selectedLink = 'hakuna';
+  selectedLink: string;
   setButtonOn = false;
 
-  constructor() { }
+  constructor( private route: Router) { }
 
   ngOnInit() { }
 
@@ -26,4 +27,19 @@ export class FormStep1Component implements OnInit {
       }
       return (this.selectedLink === name);
     }
+
+  onCheckValid(event) {
+    if (this.checkModel && this.setButtonOn) {
+      this.route.navigate(['/step1']);
+    } else {
+      return this.setButtonOn = true;
+    }
+  }
+
+  onSubmit(form: HTMLFormElement) {
+    console.log(form);
+    if (true) {
+      alert('Good to Go');
+    }
+  }
 }
